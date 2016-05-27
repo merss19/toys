@@ -1,0 +1,84 @@
+
+.top
+	background: #fff
+	height: 70px;
+	&__logo
+		float: left
+		border-right:1px solid colorBg
+		padding:10px 40px
+
+		&-link
+			display: block
+			sprite $logo
+		
+	&__phones
+		float: left
+		border-right:1px solid colorBg
+		padding:24px 19px
+
+		&:before
+			content: ''
+			display: block
+			float: left
+			sprite $phone
+			
+		&-group
+			float: left
+			padding: 0 12px;
+			font-size: 16px;
+
+		&-item
+			padding: 0 5px
+			float: left
+
+			&:last-child
+				padding-left: 13px;
+
+	&__login
+		float: left
+		border-right:1px solid colorBg
+		padding: 24px 32px;
+		cursor: pointer
+
+		&-link
+			margin-left: 17px;
+			font-size: 16px;
+
+		&:before
+			content: ''
+			float: left
+			display: block
+			sprite $login
+
+	&__cart
+		float: left
+		border-right:1px solid colorBg
+		padding:24px 17px
+		cursor: pointer
+
+		&-link
+			padding-left: 20px;
+			font-size: 16px;
+
+		&:before
+			content: ''
+			float: left
+			display: block
+			sprite $cart
+
+		&-notice
+			width: 20px
+			height: 20px
+			border-radius 9px
+			background: colorMain
+			color: #fff
+
+	&__search
+		float: left
+		padding: 26px 27px;
+		cursor: pointer
+
+		&:before
+			content: ''
+			display: block
+			sprite $search

@@ -1,0 +1,10 @@
+include /blocks/developer-info/developer-info
+
+extends /blocks/layout-default/layout-default
+//страница разработчика
+block head
+	- var pageTitle = 'Ethereum Jobs';
+block header
+	+header()
+block content
+	+developer-info()

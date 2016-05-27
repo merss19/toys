@@ -1,0 +1,24 @@
+
+mixin job(job)
+	+b.job.clearfix
+		+e.left
+			+e.name
+				+e('a').name-link(href = "job-detail.html")=job.name
+			+e.date
+				+b('i').fa.fa-calendar=job.date
+		+e.rigth
+			+e.labels.clearfix
+				+e.inner
+					each val in job.label
+						if val == "Remote"
+							+e.label.label.label-remote
+								+b('i').fa.fa-globe=val
+						else
+							+e.label.label
+								+b('i').fa.fa-clock-o=val
+			if(job.building)
+				+e.notice
+					+b('i').fa.fa-building=job.building
+			if(job.map)
+				+e.notice
+					+b('i').fa.fa-map-marker=job.map

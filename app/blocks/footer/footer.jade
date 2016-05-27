@@ -1,0 +1,18 @@
+mixin footer()
+	+b.footer&attributes(attributes)
+		+e.item
+			+e('p').text Operated By
+			+e('a').link(href = '#') EtherCasts
+			+e('p').text -  Site Design By
+			+e('a').link(href = '#') Nate Strauser
+			+e('p').text -
+			+b('i').icon.fa.fa-github
+			+e('a').link(href = '#') Fork me on GitHub
+		+e.item
+			+b('i').icon.fa.fa-rss
+			+e('p').text RSS
+			+e('a').link(href = '#') Jobs Developers
+			+e('p').text -
+			+b('i').icon.fa.fa-code
+			+e('p').text JSON
+			+e('a').link(href = '#') Jobs Developers

@@ -1,0 +1,16 @@
+mixin top()
+	+b.header__top
+		+b.inner
+			+b.top.clearfix
+				+e.logo
+					+e('a').logo-link(href = "index.html")
+				+e.phones.clearfix
+					+e.phones-group.clearfix
+						+e.phones-item +7 495 645 10 49
+						+e.phones-item +7 495 645 10 49
+				+e.login
+					+e('a').login-link Войти
+				+e.cart
+					+e('a').cart-link Корзина
+						+e('span').cart-notice 2
+				+e.search

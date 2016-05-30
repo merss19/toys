@@ -1,10 +1,32 @@
+include ../catalog/catalog
 mixin slider()
+	-var name = ['Milk','Milk2','Milk','Milk2','Milk']
 	+b.slider&attributes(attributes)
+		+catalog(getData('cat'))
 		+b.inner.clearfix
 			+b.row
-				+b.slider-carousel.col-md-8
+				+b.slider-carousel.col-md-9
 					+e.list.clearfix.owl-carousel
-						+e.item dfg
-						+e.item sdfsdfsdf
-					+b.prev prev
-					+b.next next
+						each item in name
+							+e.item.row.slide-index__
+								+e.picture.col-md-6
+									+e('img').picture-img(src = "assets/img/toy-1.png")
+								+e.text.col-md-6
+									+e.head=item
+									+e.desc сидячая в розовом бархатном платье
+									+e.price.clearfix
+										+e.price-old 3750p.
+										+e.price-new 3150р.
+									+e.action.clearfix
+										+e('button').action-buy(class='btn-main') Купить
+										+e('a').action-more Подробнее
+				+b.slider-banner.col-md-3
+					+b.sale-banner
+						+e.img
+							+e('img')(src = "assets/img/sale.png")
+						+e.head Не пропусти скидки до 90%
+						+e.desc
+							+e('p') Подпишись
+							+e('p') на нашу рассылку!
+						+e.btn
+							+b('button').btn-add Подробнее

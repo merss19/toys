@@ -1,0 +1,17 @@
+mixin brends()
+	-var brendss = ['assets/img/brends/brends-1.png','assets/img/brends/brends-2.png','assets/img/brends/brends-3.png','assets/img/brends/brends-4.png','assets/img/brends/brends-5.png','assets/img/brends/brends-6.png']
+	+b.brends&attributes(attributes)
+		+b.inner
+			+b.row
+				+b.index-brends
+					+e.header Наши бренды
+					+e('ul').list.clearfix
+						each item in brendss
+							+e('li').item.col-md-3
+								+e('a').link
+									+e('img').img(src = '#{item}' alt='brends')
+									+e.action Смотреть игрушки
+						+e.large-item.col-md-6
+							+e('a').large-item-link
+								+e('img').large-item-img(src = 'assets/img/brends/luxury.png' alt="maxitoys")
+								+e.large-item-action Смотреть игрушки

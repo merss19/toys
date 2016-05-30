@@ -1,0 +1,62 @@
+mixin cart()
+	+b.menu-drop.menu-drop__cart
+		+b.cart
+			+e.line.clearfix.timeline__
+				+e.item.active
+					+e.step.active
+					+e.desc В корзине 2 позиции
+				+e.item
+					+e.item-wrapper
+						+e.step 2
+						+e.desc Контактная информация
+				+e.item
+					+e.item-wrapper
+						+e.step 3
+						+e.desc Завершение покупки
+
+			+e.products.clearfix
+				+b('table').list-products
+					+e('tr').item.select-product__
+						+e('td').img
+							+e('a').link(href="")
+								+e('img').img(src = 'assets/img/brends/tabs-1.png' alt="")
+						+e('td').desc
+							+e.name
+								+e('a')(href="") Milk сидячая в розовом бархатном платье 50 (OR-M5043-50)
+							+e.code OR-M5043-50
+						+e('td').amount
+							+e('input').input(value = "1")
+							+e.cross x
+							+e.price 1857.4 р.
+						+e('td').price
+							+e.value 1857.4 р.
+							+e.rate за 1 шт. -
+								+e('span') 0%
+						+e('td').close
+							+b.btn-close
+					+e('tr').item.select-product__
+						+e('td').img
+							+e('a').link(href="")
+								+e('img').img(src = 'assets/img/brends/tabs-1.png' alt="")
+						+e('td').desc
+							+e.name
+								+e('a')(href="") Milk сидячая в розовом бархатном платье 50 (OR-M5043-50)
+							+e.code OR-M5043-50
+						+e('td').amount
+							+e('input').input(value = "1")
+							+e.cross x
+							+e.price 1857.4 р.
+						+e('td').price
+							+e.value 1857.4 р.
+							+e.rate за 1 шт. -
+								+e('span') 0%
+						+e('td').close
+							+b.btn-close
+				+e.checkout
+					+e.sum
+						+e.sum-text К оплате:
+						+e.sum-value 2 118.29
+					+e.btn
+						+e.btn-cart Оформить
+		+b.menu-drop__bottom
+			+e.close свернуть

@@ -1,3 +1,104 @@
+.slider
+	padding: 15px 0 13px 0;
+	position: relative
+
 .slider-carousel
+	position: relative
+	&__list
+		height: 368px;
+		background: #fff;
+
 	&__item
 		background: #fff
+		padding: 39px 0;
+
+.slide-index
+	&__picture
+		text-align: center;
+
+		&-img
+			margin-left:29px
+
+	&__text
+		padding: 16px 7px;
+
+	&__head
+		font-size: 46px
+
+	&__desc
+		max-width: 290px;
+		font-size: 30px;
+		margin-top: -10px;
+		line-height: 39px;
+		
+	&__price
+		padding: 8px 0;
+		width:100%
+		&-old
+			float: left
+			padding: 12px 0
+			color: #999
+			text-decoration: line-through
+			font-size:18px
+
+		&-new
+			float: left
+			color: colorMark
+			font-size: 30px;
+			margin-left: 22px;
+
+			
+	&__action
+		width:100%
+		padding: 7px 0;
+		&-buy
+			float: left
+
+
+		&-more
+			float: left
+			padding: 8px 18px;
+			color: colorMain
+			cursor: pointer
+
+.sale-banner
+	background: #f6a926
+	color: #fff
+	padding-bottom:30px
+	font-weight:bold
+
+	&__head
+		font-size: 25px;
+		padding: 8px 0 8px 32px;
+		line-height: 31px;
+
+	&__desc
+		font-size: 18px;
+		padding: 12px 30px;
+		line-height: 22px;
+
+	&__btn
+		text-align: center;
+		margin-top:16px
+
+.owl-controls
+	position: absolute;
+	left: 44.2%;
+	bottom: 24px;
+
+.owl-page
+	padding-right: 11px;
+	float: left
+
+	&.active
+		span
+			background:colorSecond
+			border none
+
+	span
+		width: 12px;
+		height: 12px;
+		background: #fff;
+		display: block;
+		border: 3px solid #999
+		border-radius 6px

@@ -15,6 +15,13 @@
 h1,h2,h3,h4,p
 	margin 0
 
+a
+	color: #222
+	text-decoration: none
+
+	&:hover
+		text-decoration: none
+		color: #222
 img
 	max-width: 100%;
 	height: auto;
@@ -22,8 +29,77 @@ img
 .inner
 	inner()
 
+.btn-main
+	width: 127px
+	padding: 8px
+	color: #fff
+	font-size: 16px
+	background: colorMark
+	border:none
+	text-transform: uppercase
+	margin: auto;
 
+.btn-add
+	background: #8ec63f;
+	color: #fff;
+	border: none;
+	font-size: 17px;
+	padding: 10px 35px;
+	text-transform: uppercase
+	
 .hide
 	display: none
+	transition: all 0.4s
 .show
 	display: block
+	transition: all 0.4s
+
+.catalog-open
+	left: 0
+
+.menu-drop
+	position: absolute;
+	z-index: 2;
+	border 2px solid colorMark
+	box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+	background: #fff;
+	max-width: 1000px;
+	min-width: 1000px;
+	display: none
+	top: 69px;
+	right: 451px;
+
+	&__cart
+		right: -82px
+
+	&__bottom
+		background: #f4f4f4
+		padding-top: 9px;
+		height:52px
+
+	&__close
+		text-transform: uppercase;
+		padding: 12px;
+		text-align: right;
+		font-size: 12px;
+		padding-right: 20px;
+		float: right;
+		cursor: pointer
+
+.active
+	.menu-drop
+		display: block
+
+.btn-close
+	sprite $btn
+	display: block
+	cursor: pointer
+
+.top-dropdown
+	&.active
+		background: colorMark
+
+
+.top__search
+	&.active
+		border-right: 1px solid colorMark

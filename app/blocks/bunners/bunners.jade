@@ -1,0 +1,20 @@
+mixin bunners()
+	+b.bunners-wrapper&attributes(attributes)
+		+b.inner
+			+b.row
+				+b.bunners.clearfix
+					+e.item.col-xs-3
+						+e('a').link
+							+e('img').img(src = "assets/img/bunners/bunner-1.png")
+					+e.item.col-xs-3
+						+e('a').link
+							+e('img').img(src = "assets/img/bunners/bunner-2.png")
+							+e.head Детские игрушки оптом от производителя
+							+e.more
+								+e('p') Узнать
+								+e('p') подробнее
+					+e.item.col-xs-6
+						+e('a').link
+							+e('img').img(src = "assets/img/bunners/bunner-3.png")
+							+e.bonus Дарим скидку 10% всем именинникам
+							+e.btn Узнать подробнее

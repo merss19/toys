@@ -1,0 +1,62 @@
+.text-content
+	margin: 15px
+
+.content-news
+	background: #fff
+	padding:18px
+
+	&__head
+		font-size: 18px
+		float: left
+		font-family:HNBold
+		text-transform: uppercase
+
+	&__arhive
+		float: right
+		color: colorMain
+		padding:6px
+
+	&__item
+		margin-top: 16px;
+
+		&-date
+			color: #999
+			font-size: 12px
+
+		&-link
+			color: colorMain
+			cursor: pointer
+
+.content-info
+	background: #fff
+	padding:15px 35px
+
+	&__head
+		font-size: 23px;
+		text-align: center;
+
+	&__desc
+		color: #999
+		padding: 15px 0;
+
+	&__offer
+		margin-top: 10px
+		color: #999
+
+		&-header
+			text-transform: uppercase
+
+		&__list
+			padding:0 8px
+			padding-top:22px
+
+		&-item
+			font-size:12px
+			position: relative
+			&:before
+				content: ''
+				display: block
+				sprite $items
+				position: absolute
+				top: 2px
+				left: 2px

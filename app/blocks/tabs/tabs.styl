@@ -1,0 +1,185 @@
+.tabs
+	padding:15px 0
+.index-tabs
+	&__item
+		height:455px
+		cursor: pointer
+
+		&-wrapper
+			height: 455px
+			padding: 0 13px 0 25px;
+			background: #fff
+			
+	&__top
+		padding: 21px 0;
+
+		&-name
+			font-size: 17px;
+			float: left
+			text-transform: uppercase
+			
+		&-link
+			float: right
+			color: colorMain
+			padding-top: 2px;
+
+	&__picture
+		text-align: center;
+		padding-top: 56px;
+		position: relative
+		height: 192px;
+
+
+		&-img
+			max-height: 136px
+
+		&-label
+			text-transform: uppercase
+			background: colorSecond
+			background: #8ec63f;
+			padding: 4px 7px;
+			position: absolute;
+			top: 36px;
+			left: 3px;
+			color: #fff;
+			font-size: 12px;
+			padding-bottom: 1px;
+			z-index: 2;
+
+			&:after
+				content: ''
+				margin-top: -4px;
+				margin-bottom: -5px;
+				float: right;
+				display: inline-block;
+				width: 0px;
+				height: 0px;
+				border-top: 12px solid #fff;
+				border-left: 7px solid transparent;
+				border-bottom: 11px solid #fff;
+				position: relative;
+				left: 7px;
+
+	&__text
+		padding: 7px 5px;
+		height: 93px;
+
+		&-desc
+			font-size:16px
+		&-code
+			color: #a7a7a7
+			font-size: 12px
+
+	&__price
+		text-align: center
+		padding: 0 26px;
+
+		&-new
+			display: inline-block;
+			font-size: 26px;
+
+			&.sale
+				color: colorMark
+			
+		&-old
+			float: left
+			text-decoration: line-through
+			padding-top: 8px;
+			font-size: 20px
+			color: #a7a7a7
+
+	&__btn
+		text-align: center
+		margin-top: 20px;
+
+	&__content
+		padding:15px 8px
+
+		&-item
+			height:390px
+
+.product
+	background: #fff
+	padding: 40px 0 25px 0;
+
+	&__img
+		float: left
+		width:30%
+		text-align: center
+
+		img
+			width: 238px;
+			height: 288px;
+
+	&__block
+		float: left
+		width:70%
+		
+		&-info
+			float: left
+			width:60%
+
+		&-action
+			float: left
+			width:40%
+			padding-left: 50px;
+			margin-top: 60px;
+			
+		&-desc
+			float: left
+			color: #999
+			padding: 22px 33px;
+			padding-bottom: 0;
+			font-size: 12px;
+			line-height: 16px;
+			padding-right: 35px;
+
+.product-details
+	padding-left: 34px;
+
+	&__head
+		font-size: 16px;
+		line-height: 20px;
+		font-family:HNBold
+		height: 40px;
+
+	&__info
+		margin-top: 24px
+
+	&__item
+		font-size: 12px
+
+	&__name
+		padding: 6px 0;
+		color: colorMark
+
+	&__value
+		padding: 6px 0;
+		padding-left: 36px;
+
+.product-action
+	&__amount
+		float: left
+		border 1px solid #ddd
+		padding:7px
+		width: 41px;
+		text-align: center;
+
+	&__cross
+		float: left
+		padding: 9px 11px;
+		font-size: 11px;
+
+	&__price
+		float: left
+		font-size: 24px
+		padding-left: 7px;
+
+	&__btn
+		float: left
+		margin-top: 16px
+
+		.btn-main
+			width: 180px
+			padding: 10px
+			text-transform: none

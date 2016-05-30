@@ -1,0 +1,33 @@
+mixin text-content()
+	+b.text-content&attributes(attributes)
+		+b.inner
+			+b.row
+				+b.text-content__item.col-xs-3
+					+b.content-news
+						+e.top.clearfix
+							+e.head новости
+							+e.arhive архив
+						+e('ul').list
+							+e('li').item
+								+e.item-date 10 марта
+								+e.item-link Мыльные пузыри в Макси Тойз
+							+e('li').item
+								+e.item-date 10 марта
+								+e.item-link Мыльные пузыри в Макси Тойз
+							+e('li').item
+								+e.item-date 10 марта
+								+e.item-link Игрушки оптом в Москве со скидкой от 2%
+						+e.social.social-networks
+							+e('ul').list
+								+e('li').item
+									+e('a').link
+				+b.text-content__item.col-xs-9
+					+b.content-info
+						+e.head Детские игрушки оптом от производителя
+						+e.desc Наши покупатели – крупные поставщики, розничные магазины и многочисленные частные компании, которые заказывают любые партии товара на сумму от 5000 рублей.
+						+e.offer
+							+e.offer-header Мы предлагаем вам:
+							+e('ul').offer-list
+								+e('li').offer-item купить оптом игрушки в Москве со скидкой от 2% (от 20 000 рублей) до 10% (от 100 000 рублей);
+								+e('li').offer-item купить оптом игрушки в Москве со скидкой от 2% (от 20 000 рублей) до 10% (от 100 000 рублей);
+								+e('li').offer-item купить оптом игрушки в Москве со скидкой от 2% (от 20 000 рублей) до 10% (от 100 000 рублей);

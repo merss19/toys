@@ -1,0 +1,66 @@
+mixin tabs(tabs)
+	+b.tabs&attributes(attributes)
+		+b.inner
+			+b.row
+				+b.index-tabs#tabs
+					+e('ul').list.clearfix
+						each item in tabs
+							+e('li').item.col-md-3(data-id= "#{item.id}")
+								+e.item-wrapper
+									+e.top
+										+e.top-name=item.head
+										+e('a').top-link=item.link
+									+e.picture
+										+e.picture-label=item.label
+										+e('img').picture-img(src = '#{item.img}' alt='#{item.alt}')
+									+e.text
+										+e.text-desc=item.desc
+										+e('a').text-code=item.code
+									+e.price
+										if item.priceOld
+											+e.price-old=item.priceOld
+											+e.price-new.sale=item.priceNew
+										else
+											+e.price-new=item.priceNew
+									+e.btn
+										+b.btn-main Купить
+					+e.content.hide
+						each item in tabs
+							+e.content-item.hide.clearfix.product__(id = "#{item.id}")
+								+e.close
+								+e.img
+									+e('img')(src = 'assets/img/brends/milk.png' alt='Milk сидячая в розовом бархатном платье 50')
+								+e.block.clearfix
+									+e.block-info.product-details__
+										+e.head=item.desc
+										+e('table').info
+											+e('tr').item
+												+e('td').name Категория
+												+e('td').value Фантазийные
+											+e('tr').item
+												+e('td').name Бренд
+												+e('td').value Choco and Milk
+											+e('tr').item
+												+e('td').name Страна Изг.
+												+e('td').value Китай
+											+e('tr').item
+												+e('td').name Фасовка
+												+e('td').value 1
+											+e('tr').item
+												+e('td').name Размер(см)
+												+e('td').value 42
+											+e('tr').item
+												+e('td').name Возраст(лет)
+												+e('td').value 3
+											+e('tr').item
+												+e('td').name Артикул
+												+e('td').value=item.code
+									+e.block-action.clearfix.product-action__
+										+e('input').amount(value = "1")
+										+e.cross x
+										+e.price 1857.4 р.
+										+e.btn
+											+b('button').product-btn.btn-main Купить
+												+e('span').items 1
+												| шт.
+									+e.block-desc Игрушка мягкая. Состав: Мех искусственный, трикотажный, волокно полиэфирное, фурнитура из пластмассы. Срок службы не ограничен.

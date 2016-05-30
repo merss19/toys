@@ -1,5 +1,13 @@
 include ../slider/slider
+include ../brends/brends
+include ../tabs/tabs
+include ../bunners/bunners
+include ../text-content/text-content
 include ../footer/footer
 
 mixin index()
 	+slider()
+	+brends()
+	+tabs(getData('tabs'))
+	+bunners()
+	+text-content()

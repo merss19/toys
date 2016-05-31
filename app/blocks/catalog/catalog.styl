@@ -1,13 +1,16 @@
 .catalog
+	position: fixed;
+	top: 300px;
+	z-index: 999;
 	&__btn
+		position: fixed;
+		top: 300px;
 		background: colorMark
 		color: #fff;
 		padding: 12px 12px;
 		text-transform: uppercase;
 		cursor: pointer;
-		position: absolute;
 		font-size: 17px;
-		top: 192px;
 		left: -44px;
 		font-family:HNBold
 		transform rotate(-90deg)
@@ -39,6 +42,9 @@
 		top:0
 		left: -280px;
 		z-index:3
+
+		&.active
+			left:0
 
 	&__img
 		padding-left: 11px;

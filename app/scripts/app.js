@@ -57,11 +57,15 @@ $(document).ready(function(){
 
         var $this = $(this),
             list = $this.siblings('.catalog__list');
-        list.addClass('catalog-open');
+        if(!list.hasClass('active')){
+            list.addClass('active');
+        }else{
+            list.removeClass('active');
+        }
 
         $(document).on('click',function(e){
             if ($(e.target).closest(".catalog").length) return;
-            list.removeClass('catalog-open');
+            list.removeClass('active');
 
 
         });

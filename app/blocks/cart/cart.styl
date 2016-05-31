@@ -1,6 +1,17 @@
 .cart
 	padding: 12px 12px 2px 12px;
 
+	&-empty
+		text-align: center
+		padding: 20px;
+		&__text
+			font-size:22px
+
+		&__link
+			font-size: 22px
+			color: colorMain
+			text-decoration: underline
+
 	&__products
 		margin-top: 2px
 
@@ -25,17 +36,14 @@
 		float: left
 		text-align: center
 
-		&-cart
+		.btn-main
 			width: 156px;
-			padding: 10px 11px;
+			padding: 8px 23px;
 			font-family:HNBold
-			color: #fff;
 			font-size: 18px;
-			background: #f68026;
-			border: none;
 			text-transform: uppercase;
 			margin: auto;
-			cursor: pointer
+			display: block;
 .timeline
 	&__item
 		display: inline-block

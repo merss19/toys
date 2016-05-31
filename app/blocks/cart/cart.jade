@@ -1,5 +1,8 @@
 mixin cart()
 	+b.menu-drop.menu-drop__cart
+		+b.cart-empty.hide
+			+e.text Для доступа к покупкам вам необходимо
+				+e('a').link авторизоваться.
 		+b.cart
 			+e.line.clearfix.timeline__
 				+e.item.active
@@ -57,6 +60,6 @@ mixin cart()
 						+e.sum-text К оплате:
 						+e.sum-value 2 118.29
 					+e.btn
-						+e.btn-cart Оформить
+						+b('a')(href="").btn-main Оформить
 		+b.menu-drop__bottom
 			+e.close свернуть

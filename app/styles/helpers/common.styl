@@ -31,21 +31,33 @@ img
 
 .btn-main
 	width: 127px
-	padding: 8px
+	padding: 7px
+	border: 2px solid #f68026;
 	color: #fff
 	font-size: 16px
 	background: colorMark
-	border:none
 	text-transform: uppercase
 	margin: auto;
+
+	&:hover
+		color: colorMark
+		background: transparent
 
 .btn-add
 	background: #8ec63f;
 	color: #fff;
-	border: none;
+	border: none
 	font-size: 17px;
 	padding: 10px 35px;
 	text-transform: uppercase
+
+	
+.link-main
+	color: colorMain
+	cursor: pointer
+
+	&:hover
+		text-decoration: underline
 	
 .hide
 	display: none
@@ -67,10 +79,9 @@ img
 	min-width: 1000px;
 	display: none
 	top: 69px;
-	right: 451px;
+	right: 1px
+	cursor: default;
 
-	&__cart
-		right: -82px
 
 	&__bottom
 		background: #f4f4f4

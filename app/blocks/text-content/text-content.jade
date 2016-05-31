@@ -6,21 +6,29 @@ mixin text-content()
 					+b.content-news
 						+e.top.clearfix
 							+e.head новости
-							+e.arhive архив
+							+e('a').arhive.link-main(href="") архив
 						+e('ul').list
 							+e('li').item
 								+e.item-date 10 марта
-								+e.item-link Мыльные пузыри в Макси Тойз
+								+b('a').link-main(href="") Мыльные пузыри в Макси Тойз
 							+e('li').item
 								+e.item-date 10 марта
-								+e.item-link Мыльные пузыри в Макси Тойз
+								+b('a').link-main(href="") Мыльные пузыри в Макси Тойз
 							+e('li').item
 								+e.item-date 10 марта
-								+e.item-link Игрушки оптом в Москве со скидкой от 2%
-						+e.social.social-networks
-							+e('ul').list
+								+b('a').link-main(href="") Игрушки оптом в Москве со скидкой от 2%
+						+e.social.social-networks__
+							+e('ul').list.clearfix
 								+e('li').item
-									+e('a').link
+									+e('a')(href="").link
+								+e('li').item
+									+e('a')(href="").link
+								+e('li').item
+									+e('a')(href="").link
+								+e('li').item
+									+e('a')(href="").link
+								+e('li').item
+									+e('a')(href="").link
 				+b.text-content__item.col-xs-9
 					+b.content-info
 						+e.head Детские игрушки оптом от производителя
@@ -29,5 +37,7 @@ mixin text-content()
 							+e.offer-header Мы предлагаем вам:
 							+e('ul').offer-list
 								+e('li').offer-item купить оптом игрушки в Москве со скидкой от 2% (от 20 000 рублей) до 10% (от 100 000 рублей);
+								+e('li').offer-item заказать бесплатную доставку товара до объекта  (в Москве) или до транспортной компании (от 20 000 рублей);
 								+e('li').offer-item купить оптом игрушки в Москве со скидкой от 2% (от 20 000 рублей) до 10% (от 100 000 рублей);
-								+e('li').offer-item купить оптом игрушки в Москве со скидкой от 2% (от 20 000 рублей) до 10% (от 100 000 рублей);
+								+e('li').offer-item заказать бесплатную доставку товара до объекта  (в Москве) или до транспортной компании (от 20 000 рублей);
+							+e('a').offer-link.link-main(href="") Читать подробнее

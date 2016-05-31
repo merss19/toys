@@ -5,6 +5,9 @@
 		height:455px
 		cursor: pointer
 
+		&.active
+			opacity:0.7
+
 		&-wrapper
 			height: 455px
 			padding: 0 13px 0 25px;
@@ -20,7 +23,6 @@
 			
 		&-link
 			float: right
-			color: colorMain
 			padding-top: 2px;
 
 	&__picture
@@ -97,6 +99,22 @@
 
 		&-item
 			height:390px
+
+		&-arrow
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #fff;
+			position: absolute
+			margin-top: -10px;
+
+		&-close
+			sprite $close
+			display: block;
+			float: right
+			margin:15px 15px 0 0
+			cursor: pointer
 
 .product
 	background: #fff

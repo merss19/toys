@@ -7,14 +7,41 @@ $(() => {
 
 $(document).ready(function(){
 
-    //menu
-    $('.top').on('click','.top-dropdown',function(){
-        var $this = $(this);
+    //дропдаун меню, поиск и корзина
+    $('.top-dropdown').on('click',function(e){
+        var $this = $(this),
+            target = $(e.target),
+            close = $this.find('.menu-drop__close');
             $this.siblings().removeClass('active');
-        $this.addClass('active');
-        console.log($this);
 
+        if(!target.hasClass('menu-drop__close')){
+            $this.addClass('active');
+        }
+        close.on('click',function() {
+                $this.removeClass('active');
+        });
     });
+
+
+    //удаление товаров в коризне
+
+    $('.cart').on('click','.select-product__close',function() {
+        var $this = $(this),
+            list = $this.closest('.list-products'),
+            items = list.find('.list-products__item'),
+            item = $this.closest('.list-products__item');
+
+            item.remove();
+
+            if(items.length==1){
+                $('.cart').addClass('hide');
+                $('.cart-empty').addClass('show')
+                                .removeClass('hide');
+            }
+
+        });
+
+
 
     //карусель
     var slider =$(".slider-carousel__list");
@@ -25,12 +52,13 @@ $(document).ready(function(){
         singleItem:true
     });
 
-    //catalog
+    //каталог, боковое меню
     $('.catalog__btn').on('click',function(){
 
         var $this = $(this),
             list = $this.siblings('.catalog__list');
         list.addClass('catalog-open');
+
         $(document).on('click',function(e){
             if ($(e.target).closest(".catalog").length) return;
             list.removeClass('catalog-open');
@@ -39,21 +67,37 @@ $(document).ready(function(){
         });
 
     });
+
     //tabs
     $('.index-tabs__list').on('click','.index-tabs__item',function(){
         var $this = $(this),
             parent = $this.closest('#tabs'),
             id = $this .attr('data-id'),
             content = parent.find('#'+id),
-            contentsAll = parent.find('.index-tabs__content');
+            contentsAll = parent.find('.index-tabs__content'),
+            arrow = $this.offset().left + 127;
+
+            $this.addClass('active')
+                    .siblings()
+                    .removeClass('active');
 
             contentsAll.removeClass('hide');
+
             content.removeClass('hide')
                     .addClass('show')
-                    .siblings()
+                    .siblings('.index-tabs__content-item')
                     .removeClass('show')
                     .addClass('hide');
+
+                $('.index-tabs__content-arrow').css({
+                    'left':  arrow
+                });
+
+        $('.index-tabs__content-close').on('click',function(){
+            var parent = $(this).closest('.index-tabs__content');
+                parent.addClass('hide');
+
+            $this.removeClass('active');
+        })
     });
-
-
 });

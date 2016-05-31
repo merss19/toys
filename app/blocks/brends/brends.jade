@@ -7,11 +7,11 @@ mixin brends()
 					+e.header Наши бренды
 					+e('ul').list.clearfix
 						each item in brendss
-							+e('li').item.col-md-3
+							+e('li').item.col-xs-3
 								+e('a').link
 									+e('img').img(src = '#{item}' alt='brends')
 									+e.action Смотреть игрушки
-						+e.large-item.col-md-6
+						+e.large-item.col-xs-6
 							+e('a').large-item-link
 								+e('img').large-item-img(src = 'assets/img/brends/luxury.png' alt="maxitoys")
 								+e.large-item-action Смотреть игрушки

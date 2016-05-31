@@ -5,17 +5,17 @@ mixin tabs(tabs)
 				+b.index-tabs#tabs
 					+e('ul').list.clearfix
 						each item in tabs
-							+e('li').item.col-md-3(data-id= "#{item.id}")
+							+e('li').item.col-xs-3(data-id= "#{item.id}")
 								+e.item-wrapper
 									+e.top
 										+e.top-name=item.head
-										+e('a').top-link=item.link
+										+e('a').top-link.link-main(href="")=item.link
 									+e.picture
 										+e.picture-label=item.label
 										+e('img').picture-img(src = '#{item.img}' alt='#{item.alt}')
 									+e.text
 										+e.text-desc=item.desc
-										+e('a').text-code=item.code
+										+e('a').text-code(href="")=item.code
 									+e.price
 										if item.priceOld
 											+e.price-old=item.priceOld
@@ -25,6 +25,8 @@ mixin tabs(tabs)
 									+e.btn
 										+b.btn-main Купить
 					+e.content.hide
+						+e.content-arrow
+						+e.content-close
 						each item in tabs
 							+e.content-item.hide.clearfix.product__(id = "#{item.id}")
 								+e.close

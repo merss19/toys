@@ -5,13 +5,13 @@ mixin slider()
 		+catalog(getData('cat'))
 		+b.inner.clearfix
 			+b.row
-				+b.slider-carousel.col-md-9
+				+b.slider-carousel.col-xs-9
 					+e.list.clearfix.owl-carousel
 						each item in name
 							+e.item.row.slide-index__
-								+e.picture.col-md-6
+								+e.picture.col-xs-6
 									+e('img').picture-img(src = "assets/img/toy-1.png")
-								+e.text.col-md-6
+								+e.text.col-xs-6
 									+e.head=item
 									+e.desc сидячая в розовом бархатном платье
 									+e.price.clearfix
@@ -19,8 +19,8 @@ mixin slider()
 										+e.price-new 3150р.
 									+e.action.clearfix
 										+e('button').action-buy(class='btn-main') Купить
-										+e('a').action-more Подробнее
-				+b.slider-banner.col-md-3
+										+e('a').action-more.link-main Подробнее
+				+b.slider-banner.col-xs-3
 					+b.sale-banner
 						+e.img
 							+e('img')(src = "assets/img/sale.png")

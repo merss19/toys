@@ -24,7 +24,7 @@
 
 .content-info
 	background: #fff
-	padding:17px 34px 30px 35px
+	padding:17px 34px 33px 35px
 
 	&__head
 		font-size: 18px;
@@ -33,18 +33,22 @@
 		text-transform: uppercase
 
 	&__desc
-		color: #999
-		padding: 17px 0;
+		color: #828282;
+		padding: 21px 0;
+		font-size: 13px;
 
 	&__offer
-		margin-top: 10px
+		margin-top: 6px
 		color: #999
+		font-size:13px
 
 		&-header
 			text-transform: uppercase
 
 		&-list
-			padding: 26px 35px 12px 26px;
+			padding: 26px 35px 12px 35px;
+			position: relative;
+			z-index: -1;
 
 		&-item
 			font-size:12px
@@ -61,6 +65,13 @@
 
 		&-link
 			font-size: 12px
+
+	&__wrapper
+		opacity: 0.7;
+
+	&__outer
+		box-shadow: inset 0px -190px 190px -50px #fff;
+
 
 .social-networks
 	&__list

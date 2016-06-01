@@ -1,6 +1,6 @@
 .catalog
 	position: fixed;
-	top: 300px;
+	top: 108px;
 	z-index: 999;
 	&__btn
 		position: fixed;
@@ -15,14 +15,15 @@
 		font-family:HNBold
 		transform rotate(-90deg)
 		z-index: 2;
+		transition: all 0.4s;
 
 		&:after
 			content: ''
 			display: block
 			sprite $catalog
 			position: absolute
-			right: 21px;
-			top: 20px;
+			right: 22px;
+			top: 19px;
 			transform: rotate(90deg);
 
 	&__circle
@@ -42,9 +43,6 @@
 		top:0
 		left: -280px;
 		z-index:3
-
-		&.active
-			left:0
 
 	&__img
 		padding-left: 11px;
@@ -256,3 +254,13 @@
 			&:hover
 				&:before
 					sprite $sand2
+
+.active
+	.catalog__btn
+		left:235px
+
+		&:after
+			transform: rotate(180deg);
+
+	.catalog__list
+		left: 0

@@ -25,9 +25,10 @@ $(document).ready(function(){
     });
 
 
-    //удаление товаров в коризне
+    //корзина
+    // удаление товаров в коризне
 
-    $('.cart').on('click','.select-product__close',function() {
+    $('.menu-drop__cart').on('click','.select-product__close',function() {
         var $this = $(this),
             list = $this.closest('.list-products'),
             items = list.find('.list-products__item'),
@@ -41,7 +42,22 @@ $(document).ready(function(){
                                 .removeClass('hide');
             }
 
+        })
+        .on('click','.cart__btn',function() {
+            $('.cart__products').addClass('hide');
+            $('.cart-two').addClass('show')
+                          .removeClass('hide');
+            $('.timeline__step-two,.timeline__step-two .timeline__value').addClass('active')
+        })
+        .on('click','.cart-two__btn .btn-main',function() {
+            console.log(123);
+            $('.cart-two').addClass('hide')
+                          .removeClass('show');
+            $('.cart-three').addClass('show')
+                            .removeClass('hide');
+            $('.timeline__step-three,.timeline__step-three .timeline__value').addClass('active')
         });
+
 
 
 
@@ -58,19 +74,29 @@ $(document).ready(function(){
     $('.catalog__btn').on('click',function(){
 
         var $this = $(this),
-            list = $this.siblings('.catalog__list');
-        if(!list.hasClass('active')){
-            list.addClass('active');
+            list = $this.siblings('.catalog__list'),
+            parent = $this.closest('.catalog');
+        if(!parent.hasClass('active')){
+            parent.addClass('active');
         }else{
-            list.removeClass('active');
+            parent.removeClass('active');
         }
 
         $(document).on('click',function(e){
             if ($(e.target).closest(".catalog").length) return;
-            list.removeClass('active');
-
+            parent.removeClass('active');
 
         });
+
+        /*( function( $ ) {
+            $(window).scroll(function(){
+                var top = $(window).scrollTop();
+                console.log(top);
+
+
+
+            });
+        } )( jQuery );*/
 
     });
 

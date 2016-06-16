@@ -49,7 +49,7 @@
 	&-two
 		text-align: left
 		padding:0 9px 0 12px
-		
+
 		&__title
 			font-size: 16px
 			text-align: center
@@ -66,6 +66,26 @@
 				padding: 9px 18px;
 				font-size: 18px;
 				font-family: HNBold
+
+	&-three
+		&__pending
+			text-align: center
+
+		&__title
+			font-size:18px
+			font-family:HNBold
+			margin-top: -3px;
+
+		&__link
+			color: colorMain
+			text-decoration: underline
+			padding-right: 7px;
+			
+		&__text
+			color: #777
+			padding: 0 262px;
+			margin-top: 9px;
+			line-height: 18px;
 .timeline
 	&__item
 		display: inline-block
@@ -219,3 +239,55 @@
 
 		&::-webkit-inner-spin-button
 			-webkit-appearance: none;
+.order-result
+	display: table;
+	margin-top: 35px;
+	padding: 0 24px 0 24px;
+	width: 100%;
+	padding-bottom: 123px;
+
+
+	&__item
+		display: table-row
+		width:100%
+
+	&__cell
+		display: table-cell
+		vertical-align: middle
+
+.cell
+	&-number
+		font-size: 18px
+		width:3%
+
+	&-name
+		padding: 0 6px;
+		width: 60.5%;
+		text-align: left;
+
+	&-total
+		font-size: 18px
+		padding: 0 1px 0 8px;
+		width:19%
+
+		&__amount
+			display: inline-block
+			padding: 0 7px 0 16px;
+
+		&__price
+			display: inline-block
+			padding: 0 2px;
+
+		&__cross
+			color: #777
+			font-size:12px
+			display: inline-block
+			padding: 0 8px 0 10px;
+			position: relative;
+			top: -3px;
+	&-sum
+		padding: 0 7px;
+		line-height: 20px;
+
+		&__price
+			font-size: 18px;

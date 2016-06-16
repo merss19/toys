@@ -86,7 +86,26 @@ mixin cart()
 						+e('input').value#email(type = "email")
 				+e.btn.clearfix
 					+b('button').btn-main Завершить оформление
-			+b.hide.cart-three__ tree
+			+b.hide.cart-three__
+				+e.pending
+					+e.title Заказ
+						+e('a').link №188
+						|принят в обработку
+					+e.text Наш менеджер свяжется с вами в самое ближайшее рабочее время для уточнения деталей. Спасибо за заказ!
+				+e.result.order-result__
+					+e.item
+						+e.cell.cell-number 1 -
+						+e.cell.cell-name Milk сидячая в розовом бархатном платье 50 (OR-M5043-50)
+						+e.cell.cell-total__
+							+e.amount 1
+							+e.cross x
+							+e.price 1857.4 p.
+						+e.cell.cell-sum__
+							+e.price 1857.4 p.
+							+e.text за 1 шт.
+
 
 		+b.menu-drop__bottom
 			+e.close свернуть
+			+e('a').print.hide
+				+e('span').print-link Распечатать список заказанных товаров

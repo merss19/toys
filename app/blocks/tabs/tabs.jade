@@ -1,21 +1,43 @@
-mixin tabs(tabs)
+mixin tabs(tabs,tabs2)
 	+b.tabs&attributes(attributes)
 		+b.inner
 			+b.row
+				+b.tabs__title Специальные предложения
 				+b.index-tabs#tabs
 					+e('ul').list.clearfix
+						+e('li').item.col-xs-6
+							each item in tabs2
+								+e.item-half.fly-root
+									+e.item-wrapper(data-id= "#{item.id}")
+										+e.top
+											+e.top-name=item.head
+											+e('a').top-link.link-main(href="")=item.link
+										+e('a').picture(href="detail.html")
+											+e.picture-label=item.label
+											+e('img').picture-img.fly-img(src = '#{item.img}' alt='#{item.alt}')
+										+e.text
+											+e.text-desc=item.desc
+											+e.text-code=item.code
+										+e.price
+											if item.priceOld
+												+e.price-old=item.priceOld
+												+e.price-new.sale=item.priceNew
+											else
+												+e.price-new=item.priceNew
+										+e.btn
+											+b.btn-main.btn-fly Купить
 						each item in tabs
-							+e('li').item.col-xs-3(data-id= "#{item.id}")
-								+e.item-wrapper
+							+e('li').item.col-xs-3.fly-root
+								+e.item-wrapper(data-id= "#{item.id}")
 									+e.top
 										+e.top-name=item.head
 										+e('a').top-link.link-main(href="")=item.link
-									+e.picture
+									+e('a').picture(href="detail.html")
 										+e.picture-label=item.label
-										+e('img').picture-img(src = '#{item.img}' alt='#{item.alt}')
+										+e('img').picture-img.fly-img(src = '#{item.img}' alt='#{item.alt}')
 									+e.text
 										+e.text-desc=item.desc
-										+e('a').text-code(href="")=item.code
+										+e.text-code=item.code
 									+e.price
 										if item.priceOld
 											+e.price-old=item.priceOld
@@ -23,18 +45,19 @@ mixin tabs(tabs)
 										else
 											+e.price-new=item.priceNew
 									+e.btn
-										+b.btn-main Купить
+										+b.btn-main.btn-fly Купить
 					+e.content.hide
 						+e.content-arrow
 						+e.content-close
-						each item in tabs
-							+e.content-item.hide.clearfix.product__(id = "#{item.id}")
+						-id = [['news-1','Milk сидячая в розовом бархатном платье 50(OR-M5043-50)'],['news-2','Milk-2 сидячая в розовом бархатном платье 50(OR-M5043-50)'],['special','Milk-3 сидячая в розовом бархатном платье 50(OR-M5043-50)'],['top','Milk-4 сидячая в розовом бархатном платье 50(OR-M5043-50)']]
+						each item in id
+							+e.content-item.hide.clearfix.fly-root.product__(id = "#{item[0]}")
 								+e.close
 								+e.img
-									+e('img')(src = 'assets/images/brends/milk.png' alt='Milk сидячая в розовом бархатном платье 50')
+									+b('img').fly-img(src = 'assets/images/brends/milk.png' alt='Milk сидячая в розовом бархатном платье 50')
 								+e.block.clearfix
 									+e.block-info.product-details__
-										+e.head=item.desc
+										+e.head #{item[1]}
 										+e('table').info
 											+e('tr').item
 												+e('td').name Категория
@@ -56,13 +79,18 @@ mixin tabs(tabs)
 												+e('td').value 3
 											+e('tr').item
 												+e('td').name Артикул
-												+e('td').value=item.code
+												+e('td').value 12345678
 									+e.block-action.clearfix.product-action__
 										+e('input').amount(value = "1")
 										+e.cross x
 										+e.price 1857.4 р.
 										+e.btn
-											+b('button').product-btn.btn-main Купить
+											+b('button').product-btn.btn-main.btn-fly Купить
 												+e('span').items 1
 												| шт.
 									+e.block-desc Игрушка мягкая. Состав: Мех искусственный, трикотажный, волокно полиэфирное, фурнитура из пластмассы. Срок службы не ограничен.
+									+b.gallery-modal.hide
+										+e.wrapper
+											+e.outer
+												+e.cell
+													+e.img(src = 'assets/images/brends/brends-1.png' alt='Milk сидячая в розовом')

@@ -1,27 +1,16 @@
+# Магазин игрушек(верстка)
 
-
+Jade + Stulys + БЭМ
 
 ## Старт проекта
 
-### Склонируй репозиторий и перейди в папку проекта
-```
-git clone git clone https://github.com/merss19/jobs.git
-```
-
-### Установи модули
+git clone https://github.com/merss19/shop_baron.git
 ```
 npm i
 ```
-
-### Сборка в папку `dist`
-```
 npm run build
 ```
-
-
-### Запусти шаблон
-```
-npm start
+npm start -- --open
 ```
 
 
@@ -59,7 +48,7 @@ npm start
 │   │   ├── scripts/           # Скрипты
 │   │   └── styles/            # Стили
 │   └── index.html             # Страница
-├── tasks/                     # Подключаемые скрипты с задачами для gulpfile.babel.js
+├── gulp/                      # Подключаемые скрипты с задачами для gulpfile.babel.js
 │   ├── copy.js                # Копирование
 │   ├── default.js             # Итоговые списки задач по умолчанию
 │   ├── deploy.js              # Деплой в ветку dist
@@ -80,7 +69,4 @@ npm start
 ├── gulpfile.babel.js          # Файл для запуска Gulp.js
 ├── make-block.js              # Утилита создания новых блоков
 ├── package.json               # Список модулей и прочей информации
-├── readme.md                  # Документация шаблона
-└── webpack.conf.js            # Конфигурация Webpack.js
-```
-
+└── readme.md                  # Документация шаблона

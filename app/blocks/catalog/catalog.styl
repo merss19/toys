@@ -2,6 +2,7 @@
 	position: fixed;
 	top: 108px;
 	z-index: 999;
+
 	&__btn
 		position: fixed;
 		top: 300px;
@@ -14,8 +15,8 @@
 		left: -44px;
 		font-family:HNBold
 		transform rotate(-90deg)
-		z-index: 2;
 		transition: all 0.4s;
+		z-index: 99;
 
 		&:after
 			content: ''
@@ -35,14 +36,18 @@
 		float: right;
 		margin-left: 7px;
 
+
 	&__list
-		background: #f9f9f9
 		transition: all 0.4s
 		padding: 2px 0 16px 0;
 		position: absolute
 		top:0
 		left: -280px;
-		z-index:3
+		z-index:999
+		overflow: hidden
+
+		.mCSB_draggerContainer
+			display: none
 
 	&__img
 		padding-left: 11px;
@@ -51,6 +56,10 @@
 		padding: 6.4px 17px;
 		width:280px
 		cursor: pointer
+		background: #f9f9f9
+
+		&:last-child
+			padding-bottom:24px
 
 		&:hover
 			.catalog__next

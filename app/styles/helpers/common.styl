@@ -1,5 +1,5 @@
 ::selection
-	background: transparent
+	background: #ddd
 
 .clearfix:before,
 .clearfix:after
@@ -38,6 +38,7 @@ img
 	background: colorMark
 	text-transform: uppercase
 	margin: auto;
+	cursor: pointer
 
 	&:hover
 		color: colorMark
@@ -93,6 +94,28 @@ img
 		padding-right: 20px;
 		float: right;
 		cursor: pointer
+
+	&__print
+		float: left;
+		width: auto;
+		padding: 8px 34px;
+
+		&-link
+			float: left;
+			padding: 0 20px;
+			color: colorMain
+			text-decoration: underline
+			font-size:13px
+			cursor: pointer
+
+			&:hover
+				text-decoration: none
+
+		&:before
+			content: ''
+			float: left;
+			sprite $printer
+			cursor: pointer
 
 .active
 	.menu-drop
